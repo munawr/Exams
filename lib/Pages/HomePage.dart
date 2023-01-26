@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,95 +14,227 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Stack(
+        body: Column(
           children: [
-            Container(
-              height: 250,
-              width: 500,
-              color: const Color.fromARGB(255, 117, 57, 213),
+            Stack(
+              children: [
+                Container(
+                  height: 220,
+                  width: 500,
+                  color: const Color.fromARGB(255, 117, 57, 213),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 10, top: 40),
+                  child: Text('Welcome Vimal',
+                      style: TextStyle(color: Colors.white, fontSize: 30)),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 10, top: 120),
+                  child: Text(
+                    'Take an Exam',
+                    style: TextStyle(color: Colors.white70, fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 8, left: 8.0, top: 165),
+                  child: Row(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                            color: const Color.fromARGB(255, 117, 83, 221),
+                            height: 100,
+                            width: 120,
+                            child: const Padding(
+                              padding: EdgeInsets.only(
+                                top: 60,
+                              ),
+                              child: Text(
+                                'Speed Test',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
+                            )),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                        width: 4,
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                            color: const Color.fromARGB(255, 117, 83, 221),
+                            height: 100,
+                            width: 120,
+                            child: const Padding(
+                              padding: EdgeInsets.only(
+                                top: 60,
+                              ),
+                              child: Text(
+                                'Mega Exam',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
+                            )),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                        width: 4,
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                            color: const Color.fromARGB(255, 117, 83, 221),
+                            height: 100,
+                            width: 120,
+                            child: const Padding(
+                              padding: EdgeInsets.only(
+                                top: 55,
+                              ),
+                              child: Text(
+                                'Learn By Game',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            )),
+                      )
+                    ],
+                  ),
+                ),
+              ],
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 10, top: 40),
-              child: Text('Welcome Vimal',
-                  style: TextStyle(color: Colors.white, fontSize: 30)),
+            const SizedBox(
+              height: 15,
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 10, top: 150),
-              child: Text(
-                'Take an Exam',
-                style: TextStyle(color: Colors.white70, fontSize: 20),
+            const Text(
+              'Trending Courses',
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                  fontSize: 18, color: Color.fromARGB(255, 132, 93, 217)),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                color: const Color.fromARGB(152, 100, 66, 195),
+                height: 80,
+                width: 360,
+                child: Column(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(top: 18),
+                      child: Text(
+                        'How to study For PSC exams?',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 73, top: 6),
+                      child: Row(
+                        children: const [
+                          Text('Tutor name'),
+                          SizedBox(
+                            width: 40,
+                          ),
+                          Text(
+                            '10 hours, 19 lessons',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 117, 57, 213)),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 8, left: 8.0, top: 200),
-              child: Row(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Container(
-                        color: const Color.fromARGB(255, 117, 83, 221),
-                        height: 100,
-                        width: 120,
-                        child: const Padding(
-                          padding: EdgeInsets.only(
-                            top: 60,
-                            left: 15,
+            const SizedBox(
+              height: 8,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                color: const Color.fromARGB(152, 100, 66, 195),
+                height: 80,
+                width: 360,
+                child: Column(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(top: 18),
+                      child: Text(
+                        'How to study For PSC exams?',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 73, top: 6),
+                      child: Row(
+                        children: const [
+                          Text('Tutor name'),
+                          SizedBox(
+                            width: 40,
                           ),
-                          child: Text(
-                            'Speed Test',
-                            style:
-                                TextStyle(color: Colors.white70, fontSize: 18),
-                          ),
-                        )),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                    width: 4,
-                  ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Container(
-                        color: const Color.fromARGB(255, 117, 83, 221),
-                        height: 100,
-                        width: 120,
-                        child: const Padding(
-                          padding: EdgeInsets.only(
-                            top: 60,
-                            left: 15,
-                          ),
-                          child: Text(
-                            'Mega Exam',
-                            style:
-                                TextStyle(color: Colors.white70, fontSize: 18),
-                          ),
-                        )),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                    width: 4,
-                  ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Container(
-                        color: const Color.fromARGB(255, 117, 83, 221),
-                        height: 100,
-                        width: 120,
-                        child: const Padding(
-                          padding: EdgeInsets.only(
-                            top: 60,
-                            left: 5,
-                          ),
-                          child: Text(
-                            'Learn By Game',
-                            textAlign: TextAlign.center,
+                          Text(
+                            '10 hours, 19 lessons',
                             style: TextStyle(
-                              color: Colors.white70,
-                              fontSize: 18,
-                            ),
+                                color: Color.fromARGB(255, 117, 57, 213)),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                color: const Color.fromARGB(152, 100, 66, 195),
+                height: 80,
+                width: 360,
+                child: Column(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(top: 18),
+                      child: Text(
+                        'How to study For PSC exams?',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 73, top: 6),
+                      child: Row(
+                        children: const [
+                          Text('Tutor name'),
+                          SizedBox(
+                            width: 40,
                           ),
-                        )),
-                  )
-                ],
+                          Text(
+                            '10 hours, 19 lessons',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 117, 57, 213)),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             )
           ],
